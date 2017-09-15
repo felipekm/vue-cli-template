@@ -1,5 +1,5 @@
 <template lang="pug">
-  md-toolbar.row.justify-space-between.header(:class="{ 'header--hidden': nav }")
+  md-toolbar.header(:class="{ 'header--hidden': nav }")
     md-button.md-icon-button(@click.native="$emit('openSidenav')")
       md-icon menu
     h3(@click="scrollTop") \{{ 'pling' | capitalize }}

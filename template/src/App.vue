@@ -54,6 +54,8 @@ body
 
 ul
   list-style-type none
+  padding 0
+  margin 0
 {{#router}}
 .routes
   padding-top 64px{{/router}}

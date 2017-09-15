@@ -1,6 +1,6 @@
 <template lang="pug">
-  div.hello-dialog
-    md-dialog
+  div
+    md-dialog.hello-dialog(:md-open-from="from" :md-close-to="from" @open="onOpen" @close="onClose" ref="helloDialog")
       // Title
       md-dialog-title \{{ message }}
 
@@ -12,7 +12,10 @@
 <script>
 
 export default {
-  name: 'group-dialog',
+  name: 'hello-dialog',
+  components: {
+    Snackbar: require('@/components/SnackBar.vue')
+  },
   data() {
     return {
       message: 'Olá sou uma modal de exemplo'
@@ -20,15 +23,15 @@ export default {
   },
   methods: {
     open() {
-      this.$refs['groupDialog'].open()
+      this.$refs['helloDialog'].open()
     },
     close() {
-      this.$refs['groupDialog'].close()
+      this.$refs['helloDialog'].close()
     },
     onOpen() {
       setTimeout(() => {
         this.$refs.snackbar.show('Teste snackbar')
-      }, 2000)
+      }, 1000)
     },
     onClose(type) {
       console.log(type)
