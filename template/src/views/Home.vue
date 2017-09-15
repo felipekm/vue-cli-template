@@ -19,14 +19,16 @@
       li
         a(href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener") awesome-vue
     {{#vuematerial}}
-    fab-button{{/vuematerial}}
+    hello-dialog(ref="dialog")
+    fab-button(@click="$refs.dialog.open()"){{/vuematerial}}
 </template>
 
 <script>
   export default {
     name: 'home',{{#vuematerial}}
     components: {
-      FabButton: require('@/components/Buttons/FabButton')
+      FabButton   : require('@/components/Buttons/FabButton'),
+      HelloDialog : require('@/components/Dialogs/HelloDialog')
     },{{/vuematerial}}
     data() {
       return {

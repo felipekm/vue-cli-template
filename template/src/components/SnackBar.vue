@@ -1,6 +1,6 @@
 <template lang="pug">
   md-snackbar(md-position="bottom center" ref="snackbar" md-duration="3000")
-    span {{ message }}
+    span \{{ message }}
 </template>
 
 <script>

@@ -2,15 +2,17 @@
   md-toolbar.row.justify-space-between.header(:class="{ 'header--hidden': nav }")
     md-button.md-icon-button(@click.native="$emit('openSidenav')")
       md-icon menu
-    h3(@click="scrollTop") pling
+    h3(@click="scrollTop") \{{ 'pling' | capitalize }}
     md-button.md-icon-button
       md-icon search
 </template>
 
 <script>
+import { capitalize } from '@/utils/filters/string.js'
 
 export default {
   name: 'nav-bar',
+  filters: { capitalize },
   data() {
     return {
       nav: false
