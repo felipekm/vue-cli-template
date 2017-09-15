@@ -56,10 +56,8 @@ ul
   list-style-type none
 {{#router}}
 .routes
-  padding-top 64px
-{{#router}}
+  padding-top 64px{{#router}}
 {{#vuematerial}}
 .md-list-item
-  z-index unset
-{{/vuematerial}}
+  z-index unset{{/vuematerial}}
 </style>
