@@ -2,13 +2,15 @@
   md-speed-dial#fab.md-fab-bottom-right(md-open="hover")
     md-button.md-fab.md-primary(md-fab-trigger @click.native="show")
       slot
-        md-icon {{ icon || 'add' }}
+        md-icon {{ icon }}
 </template>
 
 <script>
 export default {
   name: 'fab-button',
-  props: ['icon'],
+  props: {
+    icon: { type: String, default: 'add' },
+  },
   methods: {
     show() {
       this.$emit('click')
