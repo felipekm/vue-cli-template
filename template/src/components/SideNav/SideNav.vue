@@ -9,7 +9,7 @@
             span.app-title-child {{name}}
         // Mailboxes
         md-list
-          md-list-item(v-for="item in items")
+          md-list-item(v-for="item in items" :key="item.text")
             md-icon.md-primary {{ item.icon }}
             span {{ item.text }}
 </template>

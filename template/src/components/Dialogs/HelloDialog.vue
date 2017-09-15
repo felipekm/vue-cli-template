@@ -2,10 +2,10 @@
   div.hello-dialog
     md-dialog
       // Title
-      md-dialog-title {{ message }}
+      md-dialog-title {{{{raw-helper}}}}{{ message }}{{{{/raw-helper}}}}
 
       // Content
-      md-dialog-content {{ message }}
+      md-dialog-content {{{{raw-helper}}}}{{ message }}{{{{/raw-helper}}}}
     snackbar(ref="snackbar")
 </template>
 

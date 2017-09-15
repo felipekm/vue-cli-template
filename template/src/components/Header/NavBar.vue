@@ -64,7 +64,7 @@ h3
   color white !important
 
 .header
-  background #f5b335
+  background #2196f3
   height 40px
   position fixed
   top 0

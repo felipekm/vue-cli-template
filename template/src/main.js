@@ -1,6 +1,5 @@
 /** NPM PACKAGES **/
 import Vue from 'vue'
-import App from './App'
 {{#vuematerial}}
 import VueMaterial from 'vue-material'
 import 'vue-material/dist/vue-material.css'
