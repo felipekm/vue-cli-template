@@ -2,7 +2,7 @@
   md-speed-dial#fab.md-fab-bottom-right(md-open="hover")
     md-button.md-fab.md-primary(md-fab-trigger @click.native="show")
       slot
-        md-icon {{{{raw-helper}}}}{{ icon }}{{{{/raw-helper}}}}
+        md-icon \{{ icon }}
 </template>
 
 <script>
