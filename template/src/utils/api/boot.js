@@ -20,7 +20,8 @@ export default {
   * @return {Void}
   */
   configureAxios() {
-{{#plingtoken}}    const
+    {{#plingtoken}}
+    const
       token = localStorage.getItem('PLING-TOKEN'){{/plingtoken}}
 
     axios.defaults.baseURL = process.env.API_KEY{{#plingtoken}}
