@@ -19,8 +19,7 @@ export default {
   * @param  {String} environment {}
   * @return {Void}
   */
-  configureAxios() {
-    {{#plingtoken}}
+  configureAxios() {{{#plingtoken}}
     const
       token = localStorage.getItem('PLING-TOKEN'){{/plingtoken}}
 
@@ -28,11 +27,11 @@ export default {
     axios.defaults.headers.common['Authorization'] = token
 
     if (!token)
-      this.redirectToLogin(){{/plingtoken}}
+      this.redirectToLogin()
 
     this.saveCredentials()
 
-    axios.interceptors.response.use({{#plingtoken}}error => {
+    axios.interceptors.response.use(error => {
       error.response = error.response || {}
       error.response.data = error.response.data || {}
 
@@ -41,7 +40,7 @@ export default {
 
       return Promise.reject(error)
     }){{/plingtoken}}
-  },{{#plingtoken}}
+  }{{#plingtoken}},
   /**
   * @function redirectToLogin
   * @return {Promise} { await }
@@ -56,7 +55,7 @@ export default {
           window.location.href = url
       })
       .catch(console.error)
-  },{{/plingtoken}}
+  },
 
   /**
   * @function saveCredentials
@@ -73,5 +72,5 @@ export default {
     localStorage.setItem('PLING-CUSTOMER-CONFIG', JSON.stringifySafe(credentialData.customerConfig))
     localStorage.setItem('PLING-CURRENT-VIEW-PREFERENCES', JSON.stringifySafe(credentialData.viewPreferences))
     localStorage.setItem('PLING-USER', JSON.stringifySafe(credentialData))
-  }
+  }{{/plingtoken}}
 }
