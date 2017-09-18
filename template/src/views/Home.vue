@@ -34,8 +34,13 @@
     },{{/vuematerial}}
     data() {
       return {
-        msg: 'Welcome to Your Pling PWA'
+        msg: 'Welcome to Your Pling PWA',
+        links: []
       }
+    },
+    created() {
+      api.getFakeEssentialLinks()
+        .then(links => (this.links = links))
     }
   }
 </script>
