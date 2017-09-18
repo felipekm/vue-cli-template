@@ -18,13 +18,12 @@ export default {
   * @param  {String} token       {}
   * @param  {String} environment {}
   * @return {Void}
-  */
+  */{{#plingtoken}}
   configureAxios() {
-    {{#plingtoken}}
     const
-      token = localStorage.getItem('PLING-TOKEN'){{/plingtoken}}
+      token = localStorage.getItem('PLING-TOKEN')
 
-    axios.defaults.baseURL = process.env.API_KEY{{#plingtoken}}
+    axios.defaults.baseURL = process.env.API_KEY
     axios.defaults.headers.common['Authorization'] = token
 
     if (!token)
@@ -40,7 +39,9 @@ export default {
         return this.redirectToLogin()
 
       return Promise.reject(error)
-    }){{/plingtoken}}
+    }){{else}}
+  configureAxios() {
+    axios.defaults.baseURL = process.env.API_KEY{{/plingtoken}}
   }{{#plingtoken}},
   /**
   * @function redirectToLogin
