@@ -1,19 +1,19 @@
 <template lang="pug">
   div.hello
     // Title
-    h1.md-display-1 {{ msg }}
+    h1.md-display-1 \{{ msg }}
 
     // List
     {{#vuematerial}}
     md-list
       md-list-item(v-for="link in links" :key="link.url")
         md-icon link
-        a(:href="link.url" target="_blank" rel="noopener") {{link.label}}
+        a(:href="link.url" target="_blank" rel="noopener") \{{link.label}}
         md-divider
     {{else}}
     ul
       li(v-for="link in links" :key="link.url")
-        a(:href="link.url" target="_blank" rel="noopener") {{link.label}}
+        a(:href="link.url" target="_blank" rel="noopener") \{{link.label}}
         hr
     {{/vuematerial}}
 
@@ -26,6 +26,8 @@
 </template>
 
 <script>
+  import api from '@/utils/api'
+
   export default {
     name: 'home',{{#vuematerial}}
     components: {
@@ -39,7 +41,7 @@
       }
     },
     created() {
-      api.getFakeEssentialLinks()
+      api.getFakeLinks()
         .then(links => (this.links = links))
     }
   }
