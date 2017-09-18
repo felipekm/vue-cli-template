@@ -1,7 +1,8 @@
 <template lang="pug">
   div.infinite-scroll
     slot
-    md-spinner(md-indeterminate v-if="loading && !disableLoader")
+    {{#vuematerial}}
+    md-spinner(md-indeterminate v-if="loading && !disableLoader"){{/vuematerial}}
 </template>
 
 <script>

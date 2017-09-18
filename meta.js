@@ -61,7 +61,12 @@ module.exports = {
     "test/unit/**/*": "unit",
     "build/webpack.test.conf.js": "unit",
     "test/e2e/**/*": "e2e",
-    "src/views/**/*": "router"
+    "src/views/index.js": "router",
+    "src/components/Buttons/FabButton.vue"   : "vuematerial",
+    "src/components/Dialogs/HelloDialog.vue" : "vuematerial",
+    "src/components/Header/NavBar.vue"       : "vuematerial",
+    "src/components/SideNav/SideNav.vue"     : "vuematerial",
+    "src/components/SnackBar.vue"            : "vuematerial"
   },
   "completeMessage": "To get started:\n\n  {{^inPlace}}cd {{destDirName}}\n  {{/inPlace}}npm install\n  npm run dev\n\nDocumentation can be found at https://vuejs-templates.github.io/webpack"
 };
