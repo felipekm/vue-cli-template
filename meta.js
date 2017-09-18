@@ -23,7 +23,12 @@ module.exports = {
       "type": "string",
       "required": false,
       "message": "Project description",
-      "default": "A Vue.js project"
+      "default": "Pling project"
+    },
+    "author": {
+      "type": "string",
+      "message": "Author",
+      "default": "Pling <contato@pling.net.br>"
     },
     "router": {
       "type": "confirm",
