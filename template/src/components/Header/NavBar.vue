@@ -3,7 +3,7 @@
     md-button.md-icon-button(@click.native="$emit('openSidenav')")
       md-icon menu
     {{#router}}
-    h3(@click="scrollTop") \{{ $route.params.mailbox | capitalize }}
+    h3(@click="scrollTop") \{{ $route.params.id | capitalize }}
     {{else}}
     h3(@click="scrollTop") \{{ 'pling' | capitalize }}
     {{/router}}
