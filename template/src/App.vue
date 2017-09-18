@@ -16,8 +16,8 @@
 <script>
 export default {
   name: 'app',
-  components: {{{#vuematerial}}
-    Navbar  : require('@/components/Header/NavBar'),
+  components: {
+{{#vuematerial}}    Navbar  : require('@/components/Header/NavBar'),
     SideNav : require('@/components/SideNav/SideNav.vue'),{{/vuematerial}}{{#router}}{{else}}
     Home    : require('./views/Home.vue'){{/router}}
   }{{#vuematerial}},
