@@ -1,26 +1,28 @@
 <template lang="pug">
   div.hello
-    h1 {{ msg }}
-    h2 Essential Links
-    ul
-      li
-        a(href="https://vuejs.org" target="_blank" rel="noopener") Core Docs
-      li
-        a(href="http://vuejs-templates.github.io/webpack/" target="_blank" rel="noopener") Docs for This Template
+    // Title
+    h1.md-display-1 {{ msg }}
 
-    h2 Ecosystem
-    ul
-      li
-        a(href="http://router.vuejs.org/" target="_blank" rel="noopener") vue-router
-      li
-        a(href="http://vuex.vuejs.org/" target="_blank" rel="noopener") vuex
-      li
-        a(href="http://vue-loader.vuejs.org/" target="_blank" rel="noopener") vue-loader
-      li
-        a(href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener") awesome-vue
+    // List
     {{#vuematerial}}
-    hello-dialog(ref="dialog")
-    fab-button(@click="$refs.dialog.open()"){{/vuematerial}}
+    md-list
+      md-list-item(v-for="link in links" :key="link.url")
+        md-icon link
+        a(:href="link.url" target="_blank" rel="noopener") {{link.label}}
+        md-divider
+    {{else}}
+    ul
+      li(v-for="link in links" :key="link.url")
+        a(:href="link.url" target="_blank" rel="noopener") {{link.label}}
+        hr
+    {{/vuematerial}}
+
+    {{#vuematerial}}
+    // Dialog
+    hello-dialog(ref="dialog" from="#fab")
+
+    // Fab button
+    fab-button#fab(@click="$refs.dialog.open()"){{/vuematerial}}
 </template>
 
 <script>
@@ -39,4 +41,10 @@
 </script>
 
 <style lang="stylus" scoped>
+{{#unless vuematerial}}
+.md-display-1
+  font-size      34px
+  font-weight    400
+  letter-spacing 0
+  line-height    40px{{/unless}}
 </style>

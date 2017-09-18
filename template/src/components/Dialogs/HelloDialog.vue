@@ -16,6 +16,7 @@ export default {
   components: {
     Snackbar: require('@/components/SnackBar.vue')
   },
+  props: ['from'],
   data() {
     return {
       message: 'Olá sou uma modal de exemplo'
