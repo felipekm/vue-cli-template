@@ -27,12 +27,12 @@ module.exports = {
     },
     "port": {
       "type": "number",
-      "required": false,
-      "message": "Please, set an unused port"
+      "required": true,
+      "message": "Project port (set an unused port)"
     },
     "author": {
       "type": "string",
-      "message": "Author",
+      "message": "Author (ignore this option default will be Pling)",
       "default": "Pling <contato@pling.net.br>"
     },
     "router": {
