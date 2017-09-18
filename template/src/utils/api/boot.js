@@ -11,7 +11,7 @@ JSON.stringifySafe = (json) => {
 
 export default {
   firstTime: true,
-  appName: 'webmailApp',
+  appName: '{{ name }}',
 
   /**
   * @function configureAxios
@@ -30,13 +30,9 @@ export default {
     if (!token)
       this.redirectToLogin(){{/plingtoken}}
 
-    axios.interceptors.response.use(response => {
-      if (this.firstTime) {
-        this.firstTime = false
-        this.saveCredentials()
-      }
-      return response
-    }{{#plingtoken}}, error => {
+    this.saveCredentials()
+
+    axios.interceptors.response.use({{#plingtoken}}error => {
       error.response = error.response || {}
       error.response.data = error.response.data || {}
 
