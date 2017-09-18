@@ -19,7 +19,7 @@ export default {
   components: {
     {{#vuematerial}}
     Navbar  : require('@/components/Header/NavBar'),
-    SideNav : require('@/components/SideNav/SideNav.vue'){{/vuematerial}}{{#router}}{{else}},
+    SideNav : require('@/components/SideNav/SideNav.vue'),{{/vuematerial}}{{#router}}{{else}}
     Home    : require('./views/Home.vue'){{/router}}
   }{{#vuematerial}},
   methods: {

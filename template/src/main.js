@@ -18,7 +18,6 @@ import themes from './utils/literals/themes'
 import('./assets/css/fonts.css')
 {{/vuematerial}}
 import('./assets/css/flex.css')
-
 {{#vuematerial}}
 /** MATERIAL DESIGN **/
 Vue.use(VueMaterial)
@@ -27,6 +26,7 @@ Vue.material.registerTheme('default', themes.default)
 
 /** BOOT **/
 Vue.config.productionTip = false
+
 {{#plingtoken}}
 if (!localStorage['PLING-TOKEN'])
   boot.redirectToLogin()

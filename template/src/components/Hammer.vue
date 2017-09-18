@@ -1,7 +1,6 @@
-<template>
-  <div :style="{ 'transform': style }" >
-    <slot></slot>
-  </div>
+<template lang="pug">
+  div(:style="{ 'transform': style }")
+    slot
 </template>
 
 <script>
