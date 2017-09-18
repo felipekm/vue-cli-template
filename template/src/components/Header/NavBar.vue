@@ -2,7 +2,11 @@
   md-toolbar.header(:class="{ 'header--hidden': nav }")
     md-button.md-icon-button(@click.native="$emit('openSidenav')")
       md-icon menu
+    {{#router}}
+    h3(@click="scrollTop") \{{ $route.params.mailbox | capitalize }}
+    {{else}}
     h3(@click="scrollTop") \{{ 'pling' | capitalize }}
+    {{/router}}
     md-button.md-icon-button
       md-icon search
 </template>
