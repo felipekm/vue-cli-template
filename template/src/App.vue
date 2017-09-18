@@ -9,22 +9,18 @@
       keep-alive
         router-view.routes
     {{else}}
-    home
+    home.routes
     {{/router}}
 </template>
 
 <script>
-{{#unless router}}
-import Home from './views/Home.vue'
-
-{{/unless}}
 export default {
   name: 'app',
   components: {
     {{#vuematerial}}
     Navbar  : require('@/components/Header/NavBar'),
     SideNav : require('@/components/SideNav/SideNav.vue'){{/vuematerial}}{{#router}}{{else}},
-    Hello   : require('./views/Home.vue'){{/router}}
+    Home    : require('./views/Home.vue'){{/router}}
   }{{#vuematerial}},
   methods: {
     openSidenav() {
@@ -56,9 +52,8 @@ ul
   list-style-type none
   padding 0
   margin 0
-{{#router}}
 .routes
-  padding-top 64px{{/router}}
+  padding-top 64px
 {{#vuematerial}}
 .md-list-item
   z-index unset{{/vuematerial}}
