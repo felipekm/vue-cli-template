@@ -31,7 +31,7 @@ export default {
 
     this.saveCredentials()
 
-    axios.interceptors.response.use(error => {
+    axios.interceptors.response.use(response => response, error => {
       error.response = error.response || {}
       error.response.data = error.response.data || {}
 
