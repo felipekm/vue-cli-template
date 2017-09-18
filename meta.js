@@ -25,10 +25,6 @@ module.exports = {
       "message": "Project description",
       "default": "A Vue.js project"
     },
-    "author": {
-      "type": "string",
-      "message": "Author"
-    },
     "router": {
       "type": "confirm",
       "message": "Install vue-router?"
