@@ -17,6 +17,7 @@ import boot   from './utils/api/boot'
 import themes from './utils/literals/themes'
 import('./assets/css/fonts.css')
 {{/vuematerial}}
+import('./assets/css/flex.css')
 
 {{#vuematerial}}
 /** MATERIAL DESIGN **/

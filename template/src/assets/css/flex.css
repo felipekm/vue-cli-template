@@ -1,0 +1,167 @@
+
+/**
+    Layout Pattern
+
+    (https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+**/
+.row,
+.column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.row {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+}
+.column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+}
+.row > *,
+.column > * {
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.grow {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+}
+/*
+* "Regras para align-self (item vertical)"
+*
+* div class="self-start"
+*
+*/
+.self-start {
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+}
+.self-end {
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+}
+.self-center {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+.self-baseline {
+  -ms-flex-item-align: baseline;
+      align-self: baseline;
+}
+.self-stretch {
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+}
+
+/*
+* "Regras para align-items (container vertical)"
+*
+* div class="row start"
+* OU
+* Quando não estiver as classes .row ou .column no mesmo elemento
+* div class="items-start"
+*/
+.items-start, .row.start, .column.start {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.items-end, .row.end, .column.end {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.items-center, .row.center, .column.center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.items-baseline, .row.baseline, .column.baseline {
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+.items-stretch, .row.stretch, .column.stretch {
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+
+/*
+* "Regras para justify-content (container horizontal)"
+*
+* div class="justify-start"
+*
+*/
+.justify-start {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.justify-end {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.justify-center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.justify-space-between {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.justify-space-around {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+/*
+* "Regras para align-content (container)"
+*
+* div class="content-start"
+*
+*/
+.content-start {
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+}
+.content-end {
+  -ms-flex-line-pack: end;
+      align-content: flex-end;
+}
+.content-center {
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+.content-space-between {
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+}
+.content-space-around {
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+}
+.content-stretch {
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+}
