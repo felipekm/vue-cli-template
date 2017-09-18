@@ -3,6 +3,6 @@ var prodEnv = require('./prod.env')
 
 module.exports = merge(prodEnv, {
   NODE_ENV : '"pre-production"',
-  PORT     : 8084,
+  PORT     : {{port}},
   API_KEY  : '"https://api-pp.pling.net.br/api/v1/"'
 })

@@ -25,6 +25,11 @@ module.exports = {
       "message": "Project description",
       "default": "Pling project"
     },
+    "port": {
+      "type": "number",
+      "required": false,
+      "message": "Please, set an unused port"
+    },
     "author": {
       "type": "string",
       "message": "Author",
