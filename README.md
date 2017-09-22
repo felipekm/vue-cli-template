@@ -1,4 +1,11 @@
-# vue-pwa-boilerplate
+<h1 align="center">
+  <a href="https://pling.net.br">
+  <img src="https://user-images.githubusercontent.com/205932/30758052-47c6233a-9fa7-11e7-95b7-e7ba4fb1680c.png" alt="pling" width="500"></a>
+  <br>
+  Pling VueJS PWA Template
+  <br>
+  <br>
+</h1>
 
 > A full-featured [PWA](https://developers.google.com/web/progressive-web-apps/) template with webpack, hot-reload, lint-on-save, unit testing & css extraction.
 
